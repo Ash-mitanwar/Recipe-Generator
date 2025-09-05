@@ -1,14 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="login.css">
+  <title>Sign-in</title>
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&display=swap" rel="stylesheet">
+  <link rel="shortcut icon" href="logo.png" type="image/x-icon">
+
 </head>
+
 <body>
-    <form>
-        <label for="name">Enter your Name</label>
-        <input type="text" id="name" name="name">
-    </form>
+  <div class="container">
+    <div class="box">
+      <div class="leftbox">
+        <div class="heading">
+          <h1>Sign-in to SAIGE</h1>
+        </div>
+        <div class="welcome">
+          <p>Welcome to SAIGE — your smart cooking companion!
+            Turn your everyday ingredients into delicious recipes in seconds.</p>
+        </div>
+        <div class="main">
+          <div class="email">
+            <label for="Email">Email</label>
+            <input type="text" id="Email" name="Email" placeholder="Enter your email">
+          </div>
+
+          <div class="password">
+            <label for="Password">Password</label>
+            <input type="password" id="Password" name="Password" placeholder="Enter your Password">
+          </div>
+
+        </div>
+        <button type="submit">
+          <p>Sign in </p>
+        </button>
+        <span>Don't you have an account? <a href="#" id="showSignup">Sign up</a></span>
+
+      </div>
+      <div class="rightbox">
+        <div class="right-inner">
+          <div class="slideshow">
+            <img src="login_img.jpg" class="slide active" alt="slide 1">
+            <img src="login_img3.jpg" class="slide" alt="slide 2">
+            <img src="login_img5.jpg" class="slide" alt="slide 3">
+            <img src="login_img6.webp" class="slide" alt="slide 4">
+            <img src="login_img7.jpg" class="slide" alt="slide 5">
+            <img src="login_img8.webp" class="slide" alt="slide 6">
+            <img src="login_img9.jpg" class="slide" alt="slide 7">
+          </div>
+
+          <div class="signup">
+            <div class="heading">
+              <h1>Sign-up to SAIGE</h1>
+            </div>
+            <div class="name">
+              <label for="Name">Name</label>
+              <input type="text" id="Name" name="Name" placeholder="Enter your Name">
+            </div>
+
+            <div class="email">
+              <label for="Email">Email</label>
+              <input type="password" id="Email" name="Email" placeholder="abcd@gmail.com">
+            </div>
+            <div class="phno">
+              <label for="Phone">Enter your Number</label>
+              <input type="tel" id="Phone" name="Phone" placeholder="1234567890">
+            </div>
+            <div class="password">
+              <label for="Email">Enter your Password</label>
+              <input type="password" id="Passsword" name="Passsword">
+            </div>
+
+            <button type="submit" id="backToLogin">
+              <a href="form.html">
+                <p>Create</p>
+              </a>
+            </button>
+
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+  </div>
+  <script>
+    let slides = document.querySelectorAll('.slide');
+    let current = 0;
+
+    setInterval(() => {
+      slides[current].classList.remove('active');
+      current = (current + 1) % slides.length;
+      slides[current].classList.add('active');
+    }, 3000); // change every 3 seconds
+
+    const signupLink = document.getElementById("showSignup");
+    const rightBox = document.querySelector(".rightbox");
+
+    signupLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      rightBox.classList.add("signup-active");
+    });
+
+  </script>
+
 </body>
+
 </html>

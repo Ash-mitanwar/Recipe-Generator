@@ -2,13 +2,14 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* line-height: 1.4; */
 }
 
 .container {
     /* height: 100vh; */
     width: 100%;
     background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 255, 255, 1) 0%, rgba(220, 240, 250, 0.8) 50%, rgba(200, 220, 240, 0.6) 100%);
-    font-family: 'lufga', sans-serif;
+    font-family: 'Manrope', sans-serif;
 }
 html{
     scroll-behavior: smooth;
@@ -37,10 +38,10 @@ nav:hover {
     justify-content: center;
     align-items:center;
     height: 3vw;
-    width: 18vw;
+    width: 30vw;
     /* background-color: aqua; */
     /* border: solid black 1px; */
-    border-radius: 10rem;
+    /* border-radius: 10rem; */
     display: flex;
     margin-top: 1rem;
     margin-left: 6rem;
@@ -124,6 +125,7 @@ nav:hover {
 }
 
 .leftside {
+    margin-top: 6vw;
     display: flex;
     flex-direction: column;
     width: 40%;
@@ -135,7 +137,6 @@ nav:hover {
     font-size: 3vw;
     margin: 2vw 2vw;
     color: #116ec6cb
-        /* text-shadow: 1px 1px 6px; */
 }
 
 .leftside p {
@@ -407,8 +408,26 @@ nav:hover {
     transform: rotateY(180deg);
 }
 
-.front h2 {
-    font-size: 1.8vw;
+.overlay-text {
+    display: flex;
+    align-items: center;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 10vw;
+  background: rgba(0, 0, 0, 0.6);
+  color: white;
+  padding: 1vw;
+  text-align: center;
+  font-size: 1.3vw;
+  transition: 0.3s ease-in-out;
+  border-radius: 1vw;
+}
+.front img{
+    width: 100%;
+    height: 90%;
+    margin-bottom: 10vw;
 }
 
 .back p {
@@ -420,71 +439,7 @@ nav:hover {
 .about h2{
     text-align: center;
 }
-.members {
-  display: flex;
-  justify-content: space-evenly;
-}
 
-.member {
-  display: flex;
-  flex-direction: column; /* Show icon and text inline */
-  align-items: center;
-  width: 15vw; /* Start with icon only */
-  height: 23vw;
-  overflow: hidden;
-  border-radius: 2vw;
-  background: transparent; /* Optional: shows background */
-  transition: width background-color 1s ease-in-out;
-  cursor: pointer;
-}
-.member:hover{
-    background-color:white;
-    border-radius: 2vw;
-}
-
-
-.member img {
-  height: 5vw;
-  width: 5vw;
-  border-radius: 50%;
-}
-
-.member span {
-  white-space: normal;  /* Allow text to wrap! */
-  opacity: 0;
-  transition: opacity 0.3s ease;
-  text-align: center;
-  font-size: 0.9vw;
-  line-height: 1.5;
-}
-
-.member:hover span {
-  opacity: 1;
-}
-.members {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap; /* Helps on smaller screens */
-  overflow: visible; 
-}
-
-
-.member h3 {
-  text-align: center;
-  font-size: 1.1vw;
-}
 .footer{
     text-align: center;
-}
-.contact{
-    margin-top:3vw ;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: end;
-    margin-right: 1vw;
-}
-.contact h2{
-    margin-right: 14.6vw;
-    margin-top: 2vw;
 }
