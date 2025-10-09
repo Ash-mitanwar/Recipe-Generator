@@ -43,13 +43,13 @@
       <div class="rightbox">
         <div class="right-inner">
           <div class="slideshow">
-            <img src="login_img.jpg" class="slide active" alt="slide 1">
-            <img src="login_img3.jpg" class="slide" alt="slide 2">
-            <img src="login_img5.jpg" class="slide" alt="slide 3">
-            <img src="login_img6.webp" class="slide" alt="slide 4">
-            <img src="login_img7.jpg" class="slide" alt="slide 5">
-            <img src="login_img8.webp" class="slide" alt="slide 6">
-            <img src="login_img9.jpg" class="slide" alt="slide 7">
+            <img src="Login\login_img.jpg" class="slide active" alt="slide 1">
+            <img src="Login\login_img3.jpg" class="slide" alt="slide 2">
+            <img src="Login\login_img5.jpg" class="slide" alt="slide 3">
+            <img src="Login\login_img6.webp" class="slide" alt="slide 4">
+            <img src="Login\login_img7.jpg" class="slide" alt="slide 5">
+            <img src="Login\login_img8.webp" class="slide" alt="slide 6">
+            <img src="Login\login_img9.jpg" class="slide" alt="slide 7">
           </div>
 
           <div class="signup">
@@ -79,6 +79,9 @@
                 <p>Create</p>
               </a>
             </button>
+            <div class="back">
+              <p>Back to <a href="#" id="showSignin">Sign in</a></p>
+            </div>
 
           </div>
         </div>
@@ -91,22 +94,42 @@
   <script>
     let slides = document.querySelectorAll('.slide');
     let current = 0;
-
+  
+    // Slideshow Image Changer
     setInterval(() => {
       slides[current].classList.remove('active');
       current = (current + 1) % slides.length;
       slides[current].classList.add('active');
-    }, 3000); // change every 3 seconds
-
+    }, 3000);
+  
+    // Select elements
     const signupLink = document.getElementById("showSignup");
+    const signinLink = document.getElementById("showSignin");
     const rightBox = document.querySelector(".rightbox");
-
+    const backToLogin = document.getElementById("backToLogin");
+  
+    // Show Signup Form (slide left)
     signupLink.addEventListener("click", (e) => {
       e.preventDefault();
       rightBox.classList.add("signup-active");
+      rightBox.classList.remove("signin-active");
     });
-
+  
+    // Show Signin Form (slide right / back)
+    const backLink = document.getElementById("showSignin");
+    backLink.addEventListener("click", (e) => {
+      e.preventDefault();
+      rightBox.classList.remove("signup-active");
+      rightBox.classList.add("signin-active");
+    });
+  
+    // Optional: when "Create" button is clicked, it also slides back
+    backToLogin.addEventListener("click", (e) => {
+      rightBox.classList.remove("signup-active");
+      rightBox.classList.add("signin-active");
+    });
   </script>
+  
 
 </body>
 
