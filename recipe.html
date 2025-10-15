@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recipe Gallery</title>
+  <link rel="stylesheet" href="recipe.css">
+</head>
+<body>
+
+  <header class="header">
+    <h1>🍳 1000+ Delicious Recipes</h1>
+    <form class="search-bar">
+      <input type="text" placeholder="Search recipes...">
+      <button type="submit">Search</button>
+    </form>
+  </header>
+
+  <main class="recipe-grid">
+    <!-- Repeat this card for each recipe -->
+    <article class="recipe-card">
+      <img src="salad.jpg" alt="Pasta">
+      <div class="content">
+        <h2>Creamy Garlic Pasta</h2>
+        <p>⏱️ 20 mins | 🍽️ 2 servings</p>
+      </div>
+    </article>
+
+    <article class="recipe-card">
+      <img src="salad.jpg" alt="Salad">
+      <div class="content">
+        <h2>Healthy Green Salad</h2>
+        <p>⏱️ 10 mins | 🍽️ 1 serving</p>
+      </div>
+    </article>
+
+    <article class="recipe-card">
+      <img src="salad.jpg" alt="Cake">
+      <div class="content">
+        <h2>Chocolate Lava Cake</h2>
+        <p>⏱️ 30 mins | 🍽️ 4 servings</p>
+      </div>
+    </article>
+
+    <!-- Add more recipe cards dynamically later -->
+  </main>
+
+  <div class="pagination">
+    <button>&laquo; Prev</button>
+    <button class="active">1</button>
+    <button>2</button>
+    <button>3</button>
+    <button>Next &raquo;</button>
+  </div>
+
+  <footer>
+    <p>© 2025 Recipe Hub | Built with ❤️ using HTML & CSS</p>
+  </footer>
+
+</body>
+</html>

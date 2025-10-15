@@ -11,6 +11,9 @@
     font-family: Arial, sans-serif;
     background-color: rgba(202, 219, 234, 0.24);
 }
+body{
+    background-color: #fafafa;
+}
 
 html {
     scroll-behavior: smooth;
